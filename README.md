@@ -45,6 +45,8 @@ This project is a basic calculator microservice built using **Node.js** and **Ex
 - Visual Studio code (https://code.visualstudio.com/)
 - Node.js (https://nodejs.org/en/download/)
 - Docker (https://app.docker.com/)
+- Kubernetes (computing platform to host your microservice)
+- Kubectl (the command-line tool for interacting with Kubernetes cluster)
 
 
 # 📦 Steps to Dockerize and Run the App
@@ -101,22 +103,4 @@ kubectl apply -f service.yaml
 ```
 kubectl get pods
 kubectl get services
-```
-# 🔄 Update the Application
-1. Modify source code (e.g., update title in index.html)
-2. Build new Docker image with a new version:
-
-```
-docker build -t samarth502/task6p:v2 .
-docker push samarth502/task6p:v2
-```
-3. Update Kubernetes deployment image:
-
-
-```
-kubectl set image deployment/calculator-deployment calculator=samarth502/task6p:v2
-```
-4. Verify update:
-```
-kubectl rollout status deployment calculator-deployment
 ```
