@@ -53,16 +53,21 @@ This project is a basic calculator microservice built using **Node.js** and **Ex
 - Edit
 
 # 1. Clone the repository
+```
 git clone https://github.com/samarth9702/sit737-2025-prac6p.git
 
 cd sit737-2025-prac6p
+```
 
 # 2. Build the Docker image
+````
 docker build -t sit737-prac6p-app .
+```
 
 # 3. Start using Docker Compose
+```
 docker-compose up
-
+```
 Now go to: http://localhost:3003
 
 # ❤️ Docker Health Check + Auto Restart
