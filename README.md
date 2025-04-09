@@ -24,6 +24,8 @@ This project is a basic calculator microservice built using **Node.js** and **Ex
     └── index.html 
 ├── docker-compose.yml
 ├── Dockerfile 
+├── deployment.yaml
+├── service.yaml
 ├── logger.js 
 ├── server.js 
 ├── package.json 
@@ -85,4 +87,34 @@ docker tag calculator-app your_dockerhub_username/sit737-5.1
 # 2. Login and push
 docker login
 docker push your_dockerhub_username/sit737-5.1
+```
+
+# ☸️ Kubernetes Deployment & Interaction
+## 1️⃣ Apply Deployment and Service
+``` 
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml 
+```
+## 2️⃣ Check Pod and Service
+```
+kubectl get pods
+kubectl get services
+```
+# 🔄 Update the Application
+1. Modify source code (e.g., update title in index.html)
+2. Build new Docker image with a new version:
+
+```
+docker build -t samarth502/task6p:v2 .
+docker push samarth502/task6p:v2
+```
+3. Update Kubernetes deployment image:
+
+
+```
+kubectl set image deployment/calculator-deployment calculator=samarth502/task6p:v2
+```
+4. Verify update:
+```
+kubectl rollout status deployment calculator-deployment
 ```
