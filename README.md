@@ -48,23 +48,19 @@ This project is a basic calculator microservice built using **Node.js** and **Ex
 
 
 # 📦 Steps to Dockerize and Run the App
-- bash
-- Copy
-- Edit
-
-# 1. Clone the repository
+## 1. Clone the repository
 ```
 git clone https://github.com/samarth9702/sit737-2025-prac6p.git
 
 cd sit737-2025-prac6p
 ```
 
-# 2. Build the Docker image
-````
+## 2. Build the Docker image
+```
 docker build -t sit737-prac6p-app .
 ```
 
-# 3. Start using Docker Compose
+## 3. Start using Docker Compose
 ```
 docker-compose up
 ```
@@ -74,8 +70,6 @@ Now go to: http://localhost:3003
 This app includes a Docker health check and restart: always policy via docker-compose.yml:
 
 ```
-Copy
-Edit
 healthcheck:
   test: ["CMD", "curl", "-f", "http://localhost:3003"]
   interval: 30s
@@ -86,11 +80,13 @@ restart: always
 This ensures the container is monitored and will restart automatically if it becomes unhealthy.
 
 # 🚀 Push to Docker Hub
-```
-# 1. Tag the image
-docker tag calculator-app your_dockerhub_username/sit737-6p
 
-# 2. Login and push
+## 1. Tag the image
+```
+docker tag calculator-app your_dockerhub_username/sit737-6p
+```
+## 2. Login and push
+```
 docker login
 docker push your_dockerhub_username/sit737-6p
 ```
