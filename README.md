@@ -53,11 +53,11 @@ This project is a basic calculator microservice built using **Node.js** and **Ex
 - Edit
 
 # 1. Clone the repository
-git clone https://github.com/samarth9702/sit737-2025-prac5p.git
-cd sit737-2025-prac5p
+git clone https://github.com/samarth9702/sit737-2025-prac6p.git
+cd sit737-2025-prac6p
 
 # 2. Build the Docker image
-docker build -t sit737-prac5p-app .
+docker build -t sit737-prac6p-app .
 
 # 3. Start using Docker Compose
 docker-compose up
@@ -82,11 +82,11 @@ This ensures the container is monitored and will restart automatically if it bec
 # 🚀 Push to Docker Hub
 ```
 # 1. Tag the image
-docker tag calculator-app your_dockerhub_username/sit737-5.1
+docker tag calculator-app your_dockerhub_username/sit737-6p
 
 # 2. Login and push
 docker login
-docker push your_dockerhub_username/sit737-5.1
+docker push your_dockerhub_username/sit737-6p
 ```
 
 # ☸️ Kubernetes Deployment & Interaction
