@@ -54,6 +54,7 @@ This project is a basic calculator microservice built using **Node.js** and **Ex
 
 # 1. Clone the repository
 git clone https://github.com/samarth9702/sit737-2025-prac6p.git
+
 cd sit737-2025-prac6p
 
 # 2. Build the Docker image
